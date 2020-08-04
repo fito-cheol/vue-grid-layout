@@ -6,7 +6,9 @@ import HighchartsVue from "highcharts-vue";
 import Highcharts from "highcharts";
 import Stock from "highcharts/modules/stock";
 import highchartsMore from "highcharts/highcharts-more";
+import Grid from 'vue-js-grid'
 
+Vue.use(Grid)
 Stock(Highcharts)
 highchartsMore(Highcharts);
 

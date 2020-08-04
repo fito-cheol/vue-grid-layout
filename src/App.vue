@@ -1,5 +1,17 @@
 <template>
     <div id="app">
+        <grid
+            :draggable="true"
+            :sortable="true"
+            :items="items"
+            cellWidth=100
+            cellHeight=100
+            
+            >
+            <template slot="cell" scope="props">
+                <button style="width:80px; height:80px">{{props.item}} - {{props.index}} / {{props.sort}} </button>
+            </template>
+        </grid>
         <h1 style="text-align: center">Vue Grid Layout</h1>
         <!--<pre>{{ layout | json }}</pre>-->
         <div>
@@ -139,6 +151,32 @@
                 index: 0,
                 marginX: 10,
                 marginY: 10,
+                items: [
+                    'a',
+                    'b',
+                    'c',
+                    'a',
+                    'b',
+                    'c',
+                    'a',
+                    'b',
+                    'c',
+                    'a',
+                    'b',
+                    'c',
+                    'a',
+                    'b',
+                    'c',
+                    'a',
+                    'b',
+                    'c',
+                    'a',
+                    'b',
+                    'c',
+                    'a',
+                    'b',
+                    'c',
+                ],
             }
         },
         mounted: function () {
